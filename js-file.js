@@ -32,3 +32,19 @@ divNode.appendChild(anotherParagraph);
 
 container.appendChild(divNode);
 
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("HelloWorld");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+const btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", (e) => {
+//   alert("Hello World");
+  console.log(e.target);
+   const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    // e.target.style.background = rndCol;
+
+    document.body.style.backgroundColor = rndCol;
+});
